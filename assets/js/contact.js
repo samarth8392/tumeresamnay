@@ -35,11 +35,11 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
+                    required: "Please write your name.",
                     minlength: "your name must consist of at least 2 characters"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
+                    required: "Please enter your email id",
                     minlength: "your subject must consist of at least 4 characters"
                 },
                 number: {
