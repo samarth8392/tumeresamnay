@@ -3288,7 +3288,9 @@ hr {
 .gift-area {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center
+    padding: 20px 20px 20px 20px;
+    background-position: center center;
+    margin-bottom: 100px
 }
 
 .gift-area .gift-caption h2 {
