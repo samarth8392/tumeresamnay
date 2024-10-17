@@ -22,31 +22,6 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 80vh;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-        .image {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: transform 1s ease-out;
-        }
-        .image-left {
-            left: -50%;
-            background-image: url('assets/img/banner/dog.png'); /* Replace with your image */
-        }
-        .image-right {
-            right: -50%;
-            background-image: url('assets/img/logo/logo_big.png'); /* Replace with your image */
-        }
-    </style>
 </head>
 
 <body>
@@ -111,80 +86,81 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap">
-                            <h2>About Us</h2>
+                            <h2>404: Page Not Found</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- slider End -->
-    <!--? Our Story Start -->
-<!-- Our Story Start -->
-<div class="Our-story-area story-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center mb-70">
-                    <h2>Bride & Groom</h2>
-                    <img src="assets/img/gallery/tittle_img.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Insert the new reveal effect here -->
-        <div class="image-container">
-            <div class="image image-left"></div>
-            <div class="image image-right"></div>
-        </div>
-        <!-- End of new reveal effect -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="story-caption">
-                    <p class="story1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p class="story2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Our Story End -->
-    <!-- Our Story End -->
-    <!-- Gallery-2 img Start-->
-    <div class="gallery-area2 fix">
-        <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="gallery-active owl-carousel">
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery01.png" alt=""></a>
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Send us a message!</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form id="contact-form" method="POST">
+                            <!-- section tittle -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control w-100" name="Notes" id="Notes" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="Name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="Phone Number" id="Phone Number" type="tel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your phone number'" placeholder="Phone number">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="Subject" id="Subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" id="submit-button" class="button button-contactForm boxed-btn">Send</button>
+                            </div>
+                        </form>
+                        <div id="message"
+                                style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;">
+                            </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>704, Tower 1, </h3>
+                                <h3> Panchsheel PrimRose Apartments.</h3>
+                                <p>Hapur Road, Ghaziabad, UP</p>
+                            </div>
                         </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery02.png" alt=""></a>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+91-9910369589</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
+                            </div>
                         </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery03.png" alt=""></a>
-                        </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery04.png" alt=""></a>
-                        </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery05.png" alt=""></a>
-                        </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery06.png" alt=""></a>
-                        </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery07.png" alt=""></a>
-                        </div>
-                        <div class="gallery-img">
-                            <a href="#"><img src="assets/img/gallery/gallery08.png" alt=""></a>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>tumeresamnay@gmail.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Gallery-2 img End-->
+    </section>
+    <!-- ================ contact section end ================= -->
 </main>
 <footer>
     <!-- Footer Start-->
@@ -219,7 +195,7 @@
                     <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>ABOUT US</h4>
+                                <h4>ABOUT Us</h4>
                                 <ul>
                                     <li><a href="about.html">Bride & Groom</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
@@ -268,7 +244,6 @@
     <!-- Footer End-->
 </footer>
 
-
     <!-- JS here -->
 
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -282,21 +257,16 @@
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/slick.min.js"></script>
-    <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
+    
     <!-- One Page, Animated-HeadLin -->
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-
+    
     <!-- Scrollup, nice-select, sticky -->
     <script src="./assets/js/jquery.scrollUp.min.js"></script>
     <script src="./assets/js/jquery.nice-select.min.js"></script>
     <script src="./assets/js/jquery.sticky.js"></script>
-
-    <!-- counter , waypoint -->
-    <script src="./assets/js/jquery.counterup.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
     <!-- contact js -->
     <script src="./assets/js/contact.js"></script>
@@ -308,26 +278,67 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
     <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const imageContainer = document.querySelector('.image-container');
-            const imageLeft = document.querySelector('.image-left');
-            const imageRight = document.querySelector('.image-right');
-    
-            const containerTop = imageContainer.offsetTop;
-            const containerHeight = imageContainer.offsetHeight;
-    
-            if (scrollPosition > containerTop - windowHeight + containerHeight / 2) {
-                imageLeft.style.transform = 'translateX(90%)';
-                imageRight.style.transform = 'translateX(-90%)';
-            } else {
-                imageLeft.style.transform = 'translateX(0)';
-                imageRight.style.transform = 'translateX(0)';
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            document.getElementById("message").textContent = "Submitting..";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("submit-button").disabled = true;
+
+            // Collect the form data
+            var formData = new FormData(this);
+            var keyValuePairs = [];
+            for (var pair of formData.entries()) {
+                keyValuePairs.push(pair[0] + "=" + pair[1]);
             }
+
+            var formDataString = keyValuePairs.join("&");
+
+            // Send a POST request to your Google Apps Script
+            fetch(
+                "https://script.google.com/macros/s/AKfycbwBqTGk9IktDPJJxyRjS4r1atMmFPmRai6EM5ZdaJV6mcFBg2EusUZdcjGsvPYFVJk/exec",
+                {
+                    redirect: "follow",
+                    method: "POST",
+                    body: formDataString,
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8",
+                    },
+                }
+            )
+                .then(function (response) {
+                    // Check if the request was successful
+                    if (response.ok) {
+                        return response.text(); // or response.json() if your script returns JSON
+                    } else {
+                        throw new Error("Failed to submit the form.");
+                    }
+                })
+                .then(function (data) {
+                    // Display a success message
+                    document.getElementById("message").textContent = "Data submitted successfully!";
+                    document.getElementById("message").style.display = "block";
+                    document.getElementById("message").style.backgroundColor = "green";
+                    document.getElementById("message").style.color = "beige";
+                    document.getElementById("submit-button").disabled = false;
+                    document.getElementById("contact-form").reset();
+
+                    setTimeout(function () {
+                        document.getElementById("message").textContent = "";
+                        document.getElementById("message").style.display = "none";
+                    }, 2600);
+                })
+                .catch(function (error) {
+                    // Handle errors, you can display an error message here
+                    console.error(error);
+                    document.getElementById("message").textContent = "An error occurred while submitting the form.";
+                    document.getElementById("message").style.display = "block";
+                    document.getElementById("message").style.backgroundColor = "red";
+                    document.getElementById("message").style.color = "white";
+                    document.getElementById("submit-button").disabled = false;
+                });
         });
     </script>
+    
 </body>
 </html>
