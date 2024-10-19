@@ -2710,6 +2710,11 @@ hr {
     background-size: cover
 }
 
+.slider-height3 {
+    height: 200px;
+    background-size: cover
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-height2 {
         height: 350px
@@ -2732,6 +2737,13 @@ hr {
     background-image: url(../img/hero/hero2.png);
     background-repeat: no-repeat;
     background-size: cover
+}
+
+.slider-area3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 40%;
+    background-position: center center;
 }
 
 .slider-area {
@@ -2951,8 +2963,20 @@ hr {
     z-index: 1
 }
 
+.slider-area3 .hero-cap {
+    position: relative;
+    z-index: 1
+}
+
 .slider-area2 .hero-cap h2 {
     color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: capitalize
+}
+
+.slider-area3 .hero-cap h2 {
+    color: #000000;
     font-size: 50px;
     font-weight: 700;
     text-transform: capitalize
