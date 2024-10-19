@@ -2814,7 +2814,7 @@ hr {
     position: absolute;
     right: 224px;
     top: -17px;
-    background-image: url(../img/hero/hero_shape2.png);
+   /* background-image: url(../img/hero/hero_shape2.png); */
     width: 80px;
     height: 84px;
     background-repeat: no-repeat
