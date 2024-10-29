@@ -1,0 +1,85 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    /* You might want to adjust this */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 1s ease-out;
+}
+
+.image-left {
+    left: -50%;
+    background-image: url('../img/about/bride.png');
+}
+
+.image-right {
+    right: -50%;
+    background-image: url('../img/about/groom.png');
+}
+
+.image-left,
+.image-right {
+    background-size: contain;
+    /* This will ensure the entire image is visible */
+    background-position: center center;
+    /* This centers the image in its container */
+}
+
+/* Adjust container height based on image aspect ratio */
+.image-container {
+    height: calc((869 / 1994) * 80vw);
+    /* (image height / image width) * 50% of viewport width */
+    max-height: 80vh;
+    /* Maintain your original max height if desired */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        height: calc((869 / 1994) * 100vw);
+        /* Adjust for full width on smaller screens */
+    }
+
+    .image {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    .image-left {
+        left: -100%;
+    }
+
+    .image-right {
+        right: -100%;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 400px) {
+    .image-container {
+        height: calc((869 / 1994) * 100vw);
+        /* Adjust for full width on smaller screens */
+    }
+
+    .image {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    .image-left {
+        left: -100%;
+    }
+
+    .image-right {
+        right: -100%;
+    }
+}

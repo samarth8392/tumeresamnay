@@ -22,72 +22,8 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 80vh;
-            /* You might want to adjust this */
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
+    <link rel="stylesheet" href="assets/css/slide-in.css">
 
-        .image {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            transition: transform 1s ease-out;
-        }
-
-        .image-left {
-            left: -50%;
-            background-image: url('assets/img/about/bride.png');
-        }
-
-        .image-right {
-            right: -50%;
-            background-image: url('assets/img/about/groom.png');
-        }
-
-        .image-left,
-        .image-right {
-            background-size: contain;
-            /* This will ensure the entire image is visible */
-            background-position: center center;
-            /* This centers the image in its container */
-        }
-
-        /* Adjust container height based on image aspect ratio */
-        .image-container {
-            height: calc((869 / 1994) * 80vw);
-            /* (image height / image width) * 50% of viewport width */
-            max-height: 80vh;
-            /* Maintain your original max height if desired */
-        }
-
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .image-container {
-                height: calc((869 / 1994) * 100vw);
-                /* Adjust for full width on smaller screens */
-            }
-
-            .image {
-                width: 100%;
-                /* Full width on smaller screens */
-            }
-
-            .image-left {
-                left: -100%;
-            }
-
-            .image-right {
-                right: -100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -167,7 +103,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center mb-70">
-                            <h2>Bride & Groom</h2>
+                            <h2>Our Story</h2>
                             <img src="assets/img/gallery/tittle_img.png" alt="">
                         </div>
                     </div>
