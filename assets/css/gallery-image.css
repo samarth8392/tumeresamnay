@@ -1,0 +1,28 @@
+.single-gallery-image {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 300px;
+    transition: all 0.3s ease;
+}
+
+.single-gallery-image:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item {
+    margin: -10px;
+}
+
+.gallery-item .col-md-4 {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .single-gallery-image {
+        height: 200px;
+    }
+    
+    .col-md-4 {
+        padding: 5px;
+    }
+}
