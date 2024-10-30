@@ -2750,7 +2750,7 @@ hr {
     background-image: url(../img/hero/homeHero_1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover
+    background-size: cover;
 }
 
 .slider-area .hero__caption {
