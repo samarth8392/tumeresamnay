@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gallery-image.css">
 </head>
 
 <body>
@@ -87,7 +88,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap">
-                                <h2>Prewedding Photos</h2>
+                                <h2>Pre-wedding Photos</h2>
                             </div>
                         </div>
                     </div>
@@ -96,63 +97,15 @@
         </div>
         <!-- slider End -->
         <!--? Gallery Area Start -->
-        <div class="gallery-area section-padding30">
+        <div class="gallery-area section-padding30"> 
+
+            <!-- Your gallery structure -->
             <div class="container">
-                <div class="row gallery-item">
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g1.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g1.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g2.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g2.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g3.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g3.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g4.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g4.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g5.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g5.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g6.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g6.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g7.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g7.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g8.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g8.jpg);">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="assets/img/elements/g9.jpg" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url(assets/img/elements/g9.jpg);">
-                            </div>
-                        </a>
-                    </div>
+                <div class="row gallery-item" 
+                     id="gallery-container" 
+                     data-folder-path="/assets/img/elements/"
+                     data-image-prefix="g"
+                     data-image-extension=".jpg">
                 </div>
             </div>
         </div>
@@ -263,7 +216,7 @@
                                         Copyright Naynee & Samarth &copy;
                                         <script>document.write(new Date().getFullYear());</script> - All rights reserved
                                     </p>
-    
+
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     </p>
                                 </div>
@@ -313,6 +266,9 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- gallery image js -->
+    <script src="./assets/js/gallery-images.js"></script>
 
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
