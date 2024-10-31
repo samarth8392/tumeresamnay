@@ -3081,6 +3081,70 @@ hr {
     }
 }
 
+.welcome-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.heading-message {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.message-text {
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .welcome-text p {
+        font-size: 1rem;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .heading-message {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+    .welcome-text p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .heading-message {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+/* Optional: Add some animation to the hearts */
+.fa-pulse2 {
+    color: #ff6b6b;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 .pricing-card-area .single-card {
     background: #fff;
     padding: 70px 25px;
