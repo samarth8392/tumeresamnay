@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             galleryContainer.innerHTML = '';
             
             // Try loading images from 1 to 20 (adjust max as needed)
-            for (let i = 1; i <= 20; i++) {
+            for (let i = 1; i <= 40; i++) {
                 const relativeImagePath = `${relativePath}${imagePrefix}${i}${imageExtension}`;
                 const absoluteImagePath = createAbsolutePath(relativeImagePath);
                 
