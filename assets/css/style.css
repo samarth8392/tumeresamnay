@@ -2212,10 +2212,6 @@ hr {
     align-items: center;
 }
 
-.invitation-message .fa-heart {
-    margin: 0 10px;
-}
-
 @media (max-width: 576px) {
     .our-story-container {
         padding: 30px 0;
@@ -2798,10 +2794,14 @@ hr {
 }
 
 .slider-area {
-    position: relative;
+    position: relative; /* Changed from relative to fixed */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .video-container {
@@ -2810,60 +2810,53 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-area {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .slider-area {
+        height: -webkit-fill-available;
+    }
+    
+    .hero-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* For portrait orientation */
 @media screen and (orientation: portrait) {
     .hero-video {
-        object-fit: contain;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        object-fit: cover;
+        height: 100%;
         width: 100%;
-        height: auto;
     }
 }
 
 /* For landscape orientation */
 @media screen and (orientation: landscape) {
     .hero-video {
-        object-fit: cover;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 }
 
-/* Additional mobile-specific adjustments */
-@media screen and (max-width: 768px) {
-    .slider-area {
-        height: 100vh; /* Use viewport height */
-    }
-}
 .our-story-area {
     padding: 80px 0;
 }
