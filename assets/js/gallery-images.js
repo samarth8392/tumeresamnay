@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Get configuration from data attributes with fallbacks
     const relativePath = galleryContainer.dataset.folderPath || '/assets/img/elements/';
-    const imagePrefix = galleryContainer.dataset.imagePrefix || 'g';
-    const imageExtension = galleryContainer.dataset.imageExtension || '.jpg';
+    const imagePrefix = galleryContainer.dataset.imagePrefix || 'e';
+    const imageExtension = (galleryContainer.dataset.imageExtension || '.jpg').toUpperCase();
+
     
     // Function to create absolute path
     function createAbsolutePath(relativePath) {

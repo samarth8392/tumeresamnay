@@ -2794,7 +2794,7 @@ hr {
 }
 
 .slider-area {
-    position: relative; /* Changed from relative to fixed */
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -2804,20 +2804,15 @@ hr {
     padding: 0;
 }
 
-.video-container {
+.banner-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+.banner-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2825,20 +2820,32 @@ hr {
     padding: 0;
 }
 
+.border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Adjust thickness as needed */
+    background-color: rgb(193, 94, 94);
+    z-index: 1;
+}
+
+.border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Adjust thickness as needed */
+    background-color: rgb(193, 94, 94);
+    z-index: 1;
+}
+
 /* iOS specific fixes */
 @supports (-webkit-touch-callout: none) {
     .slider-area {
         height: -webkit-fill-available;
     }
-    
-    .hero-video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
-
 /* For portrait orientation */
 @media screen and (orientation: portrait) {
     .hero-video {
