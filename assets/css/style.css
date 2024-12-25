@@ -2830,6 +2830,16 @@ hr {
     z-index: 1;
 }
 
+.border-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Adjust thickness as needed */
+    background-color: rgb(193, 94, 94);
+    z-index: 1;
+}
+
 /* iOS specific fixes */
 @supports (-webkit-touch-callout: none) {
     .slider-area {
