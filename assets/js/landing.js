@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Force video settings for autoplay
     video.autoplay = true;
-    video.muted = false;
     video.playsinline = true;
 
     // Check if user has seen the video
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         video.play().catch(function (error) {
             console.log("Video autoplay failed:", error);
             // If autoplay fails, unmute might help
-            video.muted = true;
             video.play();
         });
     }
