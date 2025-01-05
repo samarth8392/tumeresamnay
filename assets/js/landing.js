@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Force video settings for autoplay
     video.autoplay = true;
-    video.muted = true;
+    video.muted = false;
     video.playsinline = true;
 
     // Check if user has seen the video
