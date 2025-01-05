@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById('closeModal');
     const video = document.getElementById('welcomeVideo');
 
+    // Force video settings for autoplay
+    video.autoplay = true;
+    video.muted = true;
+    video.playsinline = true;
+
     // Check if user has seen the video
     if (!localStorage.getItem('videoPlayed')) {
         showModal();
@@ -13,8 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function showModal() {
         modal.style.display = 'block';
         overlay.style.display = 'block';
+        video.style.display = 'block';
+        // Force play with user interaction
         video.play().catch(function (error) {
             console.log("Video autoplay failed:", error);
+            // If autoplay fails, unmute might help
+            video.muted = true;
+            video.play();
         });
     }
 
@@ -24,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.style.display = 'none';
         video.pause();
         video.currentTime = 0;
-        // Set flag in localStorage
+        video.style.display = 'none';
         localStorage.setItem('videoPlayed', 'true');
     }
 
