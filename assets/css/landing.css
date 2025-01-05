@@ -6,11 +6,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 10px;  /* Reduced from 20px */
-    border-radius: 4px;  /* Reduced from 8px for a tighter look */
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: fit-content;  /* Changed from 800px to fit-content */
-    width: auto;  /* Changed from 90% to auto */
+    max-width: 800px;
+    width: 90%;
 }
 
 .modal-overlay {
@@ -48,10 +48,9 @@
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%;  /* Maintains 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    width: 640px;  /* Added fixed width - adjust this to your video size */
 }
 
 .video-container iframe,
