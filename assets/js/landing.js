@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Force play with user interaction
         video.play().catch(function (error) {
             console.log("Video autoplay failed:", error);
-            // If autoplay fails, unmute might help
             video.play();
         });
     }
@@ -30,11 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
         modal.style.display = 'none';
         overlay.style.display = 'none';
+        
+        // Full video cleanup
         video.pause();
         video.currentTime = 0;
         video.style.display = 'none';
+        video.src = video.src; // Reset the video source
+        
+        // Remove video element from DOM temporarily
+        video.remove();
+        modal.appendChild(video); // Re-add it to maintain reference
+        
         localStorage.setItem('videoPlayed', 'true');
     }
+
+    // Add event listener for when video ends
+    video.addEventListener('ended', function() {
+        closeModal();
+    });
 
     // Event listeners
     closeBtn.addEventListener('click', closeModal);
