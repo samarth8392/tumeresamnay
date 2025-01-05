@@ -107,68 +107,70 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="form-wrapper">
                             <form id="contact-form" method="POST">
-                                <!-- section tittle -->
-                                <div class="row ">
+                                <!-- Attendance Radio Buttons -->
+                                <div class="row mb-4">
                                     <div class="col-lg-12">
                                         <div class="section-tittle tittle-form text-center mb-30">
                                             <h2>Are you attending?</h2>
                                             <img src="assets/img/banner/tittle_img2.png" alt="">
                                         </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-box mb-30">
+                                                <div class="control">
+                                                    <input class="input" type="text" placeholder="Name" name="Name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <label class="mr-4">
+                                                <input type="radio" name="Attending" value="yes" class="mr-2">
+                                                <span>Yes</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="Attending" value="no" class="mr-2">
+                                                <span>No</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-box mb-30">
-                                            <div class="control">
-                                                <input class="input" type="text" placeholder="Name" name="Name" />
+        
+                                <!-- Form Fields (Initially Hidden) -->
+                                <div id="form-fields" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-box mb-30">
+                                                <div class="control">
+                                                    <input class="input" type="tel" placeholder="Your contact number" name="Phone Number" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-30">
+                                            <div class="select-itms">
+                                                <select name="Guests" id="select2">
+                                                    <option value="">Select number of guests</option>
+                                                    <option value="1">1 Guest</option>
+                                                    <option value="2">2 Guest</option>
+                                                    <option value="3">3 Guest</option>
+                                                    <option value="4">4 Guest</option>
+                                                    <option value="4+">4+ Guest</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-box mb-10">
+                                                <div class="control">
+                                                    <textarea class="textarea" placeholder="Message" name="Notes"></textarea>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box mb-30">
-                                            <div class="control">
-                                                <input class="input" type="email" placeholder="Your Email"
-                                                    name="Email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box mb-30">
-                                            <div class="control">
-                                                <input class="input" type="tel" placeholder="Your contact number"
-                                                    name="Phone Number" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 mb-30">
-                                        <div class="select-itms">
-                                            <select name="Guests" id="select2">
-                                                <option value="">Select number of guests</option>
-                                                <option value="1">1 Guest</option>
-                                                <option value="2">2 Guest</option>
-                                                <option value="3">3 Guest</option>
-                                                <option value="4">4 Guest</option>
-                                                <option value="4+">4+ Guest</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box mb-10">
-                                            <div class="control">
-                                                <textarea class="textarea" placeholder="Message"
-                                                    name="Notes"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="control">
-                                        <button class="btn" type="submit" id="submit-button">Confirm now</button>
-                                    </div>
+                                </div>
+        
+                                <div class="control">
+                                    <button class="btn" type="submit" id="submit-button">Confirm now</button>
                                 </div>
                             </form>
-                            <div id="message"
-                                style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;">
-                            </div>
+                            <div id="message" style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;"></div>
                             <div class="shape-inner-flower">
                                 <img src="assets/img/banner/shape2.png" class="shpe2" alt="">
                             </div>
@@ -303,6 +305,7 @@
     <!-- JS here -->
 
     <!-- All JS Custom Plugins Link Here here -->
+    <script src="./assets/js/rsvp.js"></script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -336,6 +339,7 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
 
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
