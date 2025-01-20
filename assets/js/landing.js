@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.getElementById('modalOverlay');
     const closeBtn = document.getElementById('closeModal');
     const video = document.getElementById('welcomeVideo');
+    const videoSource = video.querySelector('source');
+    const originalSrc = videoSource.src;
 
     // Force video settings for autoplay
     video.autoplay = true;
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'block';
         overlay.style.display = 'block';
         video.style.display = 'block';
+        videoSource.src = originalSrc;
+        video.load();
         // Force play with user interaction
         video.play().catch(function (error) {
             console.log("Video autoplay failed:", error);
@@ -29,17 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
         modal.style.display = 'none';
         overlay.style.display = 'none';
-        
-        // Full video cleanup
         video.pause();
         video.currentTime = 0;
         video.style.display = 'none';
-        video.src = video.src; // Reset the video source
-        
-        // Remove video element from DOM temporarily
-        video.remove();
-        modal.appendChild(video); // Re-add it to maintain reference
-        
+        // Remove the source and force a reload
+        videoSource.src = '';
+        video.load();
         localStorage.setItem('videoPlayed', 'true');
     }
 
