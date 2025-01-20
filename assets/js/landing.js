@@ -33,12 +33,29 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
         modal.style.display = 'none';
         overlay.style.display = 'none';
+        
+        // Multiple approaches to ensure video stops
         video.pause();
         video.currentTime = 0;
         video.style.display = 'none';
-        // Remove the source and force a reload
+        
+        // Remove source and reload
         videoSource.src = '';
         video.load();
+        
+        // Additional stop attempts
+        try {
+            video.stop && video.stop();
+        } catch(e) {}
+        
+        // Set muted in case audio persists
+        video.muted = true;
+        
+        // Remove tracks if any
+        if (video.textTracks) {
+            Array.from(video.textTracks).forEach(track => track.mode = 'disabled');
+        }
+        
         localStorage.setItem('videoPlayed', 'true');
     }
 
@@ -47,14 +64,33 @@ document.addEventListener('DOMContentLoaded', function () {
         closeModal();
     });
 
-    // Event listeners
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
+    // Event listeners for close actions
+    closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+    });
+    
+    overlay.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+    });
 
     // Close modal with ESC key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
+            e.preventDefault();
             closeModal();
         }
     });
+
+    // Additional safety check: if modal is hidden but video is playing, stop it
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (modal.style.display === 'none' && !video.paused) {
+                closeModal();
+            }
+        });
+    });
+
+    observer.observe(modal, { attributes: true, attributeFilter: ['style'] });
 });
