@@ -2,11 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const formFields = document.getElementById('form-fields');
     const attendanceInputs = document.querySelectorAll('input[name="Attending"]');
     const form = document.getElementById('contact-form');
+    const datesSelect = document.getElementById('select3');
     const guestSelect = document.getElementById('select2');
     const notesTextarea = form.querySelector('textarea[name="Notes"]');
 
     // Store the original options for "Yes" attendance
-    const yesOptions = `
+    const yesOptions1 = `
     <option value="">Select number of guests</option>
     <option value="1">Just Me</option>
     <option value="2">2 Guest</option>
@@ -15,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     <option value="4+">4+ Guest</option>
 `;
 
+    const yesOptions2 = `
+    <option value="">Select dates you will attend</option>
+    <option value="13-14 Feb">13-14 Feb</option>
+    <option value="Only 14 Feb">Only 14 Feb</option>
+`;
 
     // Function to handle attendance selection
     function handleAttendanceChange(e) {
@@ -32,10 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Set select to only show 0 option for non-attendance
             guestSelect.innerHTML = '<option value="0">0 Guest</option>';
             guestSelect.value = "0";
+            datesSelect.innerHTML = '<option value="NA">Not attending</option>';
+            datesSelect.value = "NA";
         } else {
             // Restore original options for attendance
-            guestSelect.innerHTML = yesOptions;
+            guestSelect.innerHTML = yesOptions1;
             guestSelect.value = "";
+            datesSelect.innerHTML = yesOptions2;
+            datesSelect.value = "";
             notesTextarea.value = ""; // Clear the "Not attending" message
             notesTextarea.placeholder = "Tell us your plans"; // Reset placeholder
         }
@@ -62,9 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (attending.value === 'yes') {
             const name = form.querySelector('input[name="Name"]').value;
             const email = form.querySelector('input[name="Email"]').value;
+            const dates = form.querySelector('input[name="Dates"]').value;
             const guests = form.querySelector('select[name="Guests"]').value;
 
-            if (!name || !email || !guests) {
+            if (!name || !email || !dates || !guests) {
                 e.preventDefault();
                 document.getElementById('message').textContent = 'Please fill in all required fields.';
                 document.getElementById('message').style.display = 'block';
@@ -75,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             // If "No" is selected, set minimal required information
             notesTextarea.value = "Not attending";
+            datesSelect.value = "NA";
             guestSelect.value = "0";
             // Set default values for required fields to ensure form submission works
             if (!form.querySelector('input[name="Name"]').value) {
